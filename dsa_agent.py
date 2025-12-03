@@ -13,6 +13,8 @@ import bisect
 import itertools
 from dataclasses import dataclass, field
 from typing import List, Dict, Any, Generator, Tuple, Optional
+import dotenv
+dotenv.load_dotenv()
 
 import google.generativeai as genai
 from google.api_core import exceptions as google_exceptions

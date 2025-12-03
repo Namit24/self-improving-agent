@@ -14,22 +14,18 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Self-Improving Code Agent")
-st.caption("Enter any problem. The agent will write tests, write code, and optimize it live.")
+st.title("self improving agent")
 
 with st.container():
     col_input, col_config = st.columns([3, 1])
     with col_input:
         user_problem = st.text_area(
-            "Problem Statement", 
+            "ps", 
             height=150, 
-            placeholder="E.g., Write a function that takes a list of integers and returns the length of the longest consecutive sequence."
+            placeholder="E.g: text"
         )
-    with col_config:
-        st.write("### Settings")
-        st.info("Using **Gemini 2.5 Flash**\n\nStreaming: **ON**\n\nAuto-QA: **ON**")
 
-if st.button("Initialize Agent & Solve", type="primary", disabled=not user_problem):
+if st.button("run", type="primary", disabled=not user_problem):
     
     agent = DSAAgent(user_problem)
     
