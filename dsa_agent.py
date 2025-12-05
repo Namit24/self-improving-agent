@@ -277,9 +277,9 @@ class DSAAgent:
 
                     if result == test['expected']:
                         passed += 1
-                        test_breakdown.append(f"Test {i+1}:✅Passed ({duration_ms:.4f}ms)")
+                        test_breakdown.append(f"Test {i+1}:Passed ({duration_ms:.4f}ms)")
                     else:
-                        msg = f"Test {i+1}:❌Expected {test['expected']}, got {result}"
+                        msg = f"Test {i+1}:Expected {test['expected']}, got {result}"
                         errors.append(msg)
                         test_breakdown.append(msg)
                 except TimeoutException:
