@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from dsa_agent import DSAAgent
+from agent import Agent
 
 st.set_page_config(page_title="Self-Improving Agent", layout="wide")
 

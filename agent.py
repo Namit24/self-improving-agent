@@ -67,7 +67,7 @@ class TimeoutException(Exception):
     pass
 
 
-class DSAAgent:
+class Agent:
     def __init__(self, problem_statement: str):
         self.problem = problem_statement
         self.test_cases: List[Dict[str, Any]] = []
